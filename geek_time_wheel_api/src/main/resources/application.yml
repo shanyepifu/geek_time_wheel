@@ -1,0 +1,8 @@
+# 服务器启动端口
+server:
+  port: 8085
+
+# 配置文件切换
+spring:
+  profiles:
+    active: dev
