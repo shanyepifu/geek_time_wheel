@@ -12,6 +12,8 @@
         <module>geek_time_wheel_core</module>
         <module>geek_time_wheel_manager</module>
         <module>geek_time_wheel_api</module>
+        <module>geek_time_wheel_client</module>
+        <module>geek_time_wheel_zookeeper</module>
     </modules>
 
     <properties>
@@ -42,6 +44,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-redis</artifactId>
             <version>${spring.boot.redis.version}</version>
+        </dependency>
+
+        <!-- Lang3 tools -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8.1</version>
         </dependency>
 
         <!-- Swagger UI -->

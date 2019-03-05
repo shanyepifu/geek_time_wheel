@@ -1,10 +1,8 @@
-package com.geek.wheel.service.redis;
+package com.geek.wheel.dao.store;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * @DESCRIPTION: Redis
@@ -13,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * @DATETIME: 2019/1/29 15:45
  */
 @Service
-public class RedisServiceImpl implements RedisService{
+public class RedisMapperImpl implements RedisMapper {
 
     @Autowired
     private RedisTemplate redisTemplate;

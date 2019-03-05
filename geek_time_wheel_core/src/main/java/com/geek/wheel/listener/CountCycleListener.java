@@ -1,7 +1,7 @@
 package com.geek.wheel.listener;
 
 import com.geek.wheel.constants.RedisConstants;
-import com.geek.wheel.service.redis.RedisService;
+import com.geek.wheel.dao.store.RedisMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +19,10 @@ public class CountCycleListener {
     private Logger logger = LoggerFactory.getLogger(getClass());
 
     @Autowired
-    private RedisService redisService;
+    private RedisMapper redisMapper;
 
     public void countCycle(){
-        Long step = redisService.counter(RedisConstants.CYCLE_COUNTER, 1L);
+        Long step = redisMapper.counter(RedisConstants.CYCLE_COUNTER, 1L);
         logger.debug("Time wheel already excute " + step + " cycle");
     }
 

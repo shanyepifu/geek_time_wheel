@@ -1,13 +1,16 @@
 package com.geek.wheel.config;
 
+import com.geek.wheel.dao.pub.RedisPubMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -28,6 +31,9 @@ public class TimeWheelTaskConfiguration implements InitializingBean, DisposableB
 
     @Value("${spring.timingwheel.maxExecuteSize}")
     private Integer maxExecuteSize;
+
+    @Autowired
+    private RedisPubMapper redisPubMapper;
 
     private AtomicBoolean shutdown = new AtomicBoolean(false);
 
@@ -53,6 +59,7 @@ public class TimeWheelTaskConfiguration implements InitializingBean, DisposableB
             while (!shutdown.get()){
                 Integer element = queue.poll();
                 if (element != null){
+                    redisPubMapper.sendMessage("gtw_task_pub_sub_channel", "task_" + element);
                     logger.info("current excute : " + element);
                 }
             }

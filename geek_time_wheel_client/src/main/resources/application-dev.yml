@@ -1,0 +1,13 @@
+spring:
+    # application name
+    application:
+        name: gtm_client
+    # redis
+    redis:
+        cluster:
+            nodes: 10.179.130.251:7000,10.179.130.251:7001,10.179.130.251:7002
+        jedis:
+            pool:
+                max-active: 8
+                max-idle: 8
+                min-idle: 0

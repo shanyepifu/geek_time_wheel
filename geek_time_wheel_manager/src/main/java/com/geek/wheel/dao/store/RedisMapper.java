@@ -1,6 +1,6 @@
-package com.geek.wheel.service.redis;
+package com.geek.wheel.dao.store;
 
-public interface RedisService {
+public interface RedisMapper {
 
     /**
      * 计算执行圈数
