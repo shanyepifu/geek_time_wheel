@@ -11,9 +11,8 @@
     <modules>
         <module>geek_time_wheel_core</module>
         <module>geek_time_wheel_manager</module>
-        <module>geek_time_wheel_api</module>
         <module>geek_time_wheel_client</module>
-        <module>geek_time_wheel_zookeeper</module>
+        <module>geek_time_wheel_demo</module>
     </modules>
 
     <properties>
@@ -39,6 +38,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <!-- Spring Boot redis -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

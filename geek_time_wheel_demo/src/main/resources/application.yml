@@ -1,0 +1,7 @@
+server:
+  port: 8080
+
+timeWheel:
+  connectionInfo: 127.0.0.1:2181
+  clientIp: 127.0.0.1
+  rpcServerPort: 8081
