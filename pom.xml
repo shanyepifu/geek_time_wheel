@@ -13,6 +13,7 @@
         <module>geek_time_wheel_manager</module>
         <module>geek_time_wheel_client</module>
         <module>geek_time_wheel_demo</module>
+        <module>geek_time_wheel_rpc</module>
     </modules>
 
     <properties>
@@ -22,6 +23,7 @@
         <java.version>1.8</java.version>
         <!-- dependences -->
         <spring.boot.redis.version>1.4.7.RELEASE</spring.boot.redis.version>
+        <netty.version>4.1.36.Final</netty.version>
         <swagger.version>2.9.2</swagger.version>
     </properties>
 
@@ -46,11 +48,28 @@
             <version>${spring.boot.redis.version}</version>
         </dependency>
 
+        <!-- netty -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>${netty.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.7.1</version>
+        </dependency>
+
         <!-- Lang3 tools -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.8.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
         </dependency>
 
         <!-- Swagger UI -->

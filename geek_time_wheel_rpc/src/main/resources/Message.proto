@@ -1,0 +1,20 @@
+syntax = "proto3";
+//定义protobuf的包名称空间
+option java_package = "com.geek.rpc.message";
+// 消息体名称
+option java_outer_classname = "ProtoBufMessage";
+/*消息类*/
+message MessageRequest{
+    //消息id
+    uint64 message_id = 1;
+    //发送方信息
+    string message_from = 2;
+    //时间戳(单位:毫秒)
+    uint64 time = 3;
+    //消息类型  1：纯文本  2：其他
+    uint32 msg_type = 4;
+    //消息内容
+    string content = 5;
+    //附加属性
+    string property = 6;
+}
