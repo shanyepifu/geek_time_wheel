@@ -8,8 +8,7 @@
         <version>0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>geek_time_wheel_rpc</artifactId>
-
+    <name>GTW :: RPC</name>
 
 </project>

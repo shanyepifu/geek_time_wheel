@@ -8,6 +8,7 @@
     <artifactId>geek_time_wheel</artifactId>
     <packaging>pom</packaging>
     <version>0.1</version>
+    <name>GTW</name>
     <modules>
         <module>geek_time_wheel_core</module>
         <module>geek_time_wheel_manager</module>
