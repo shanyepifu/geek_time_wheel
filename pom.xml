@@ -24,7 +24,7 @@
         <java.version>1.8</java.version>
         <!-- dependences -->
         <spring.boot.redis.version>1.4.7.RELEASE</spring.boot.redis.version>
-        <netty.version>4.1.36.Final</netty.version>
+        <netty.version>4.1.42.Final</netty.version>
         <swagger.version>2.9.2</swagger.version>
     </properties>
 
